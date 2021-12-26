@@ -1,7 +1,7 @@
 import scala.io.Source
 
 object Day1 extends App {
-  val fileName = "./input/Day1part1_input.txt"
+  val fileName = "./input/Day1_input.txt"
 
   def getNumOfIncreases(depths: Seq[Int]): Int = {
     var numOfIncreases: Int = 0
