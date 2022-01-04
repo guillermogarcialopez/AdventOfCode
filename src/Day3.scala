@@ -1,8 +1,8 @@
 import scala.io.Source
 
 object Day3 extends App {
-  val fileName = "./input/Day3example_input.txt"
-//  val fileName = "./input/Day3_input.txt"
+//  val fileName = "./input/Day3example_input.txt"
+  val fileName = "./input/Day3_input.txt"
 
   /* Part one */
   val diagnosticReport = Source.fromFile(fileName).getLines.toSeq
@@ -25,8 +25,7 @@ object Day3 extends App {
       epsilonRate = epsilonRate + "0"
     }
 
-    /* Part two */
-//    if(oxygenList.size.<=(2)){
+    /* Part two */ // TODO works for example input but not for my generated input  
     if(oxygenList.size.equals(2)){
       oxygenList = oxygenList.filter(_.apply(digitIndex).toString.equals("1"))
     } else {
@@ -37,7 +36,6 @@ object Day3 extends App {
       }
     }
 
-//    if(co2List.size.<=(2)){
     if(co2List.size.equals(2)){
       co2List = co2List.filter(_.apply(digitIndex).toString.equals("0"))
     } else {
